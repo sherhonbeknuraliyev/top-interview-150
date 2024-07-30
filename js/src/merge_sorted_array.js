@@ -1,19 +1,19 @@
 function mergeSortedArray(nums1, m, nums2, n) {
-  let i = m - 1;
-  let j = n - 1;
-  let k = m + n - 1;
+  let mergedPointer = m + n - 1;
+  let firstArrPointer = m - 1;
+  let secondArrPointer = n - 1;
 
-  while (j >= 0) {
-    if (i >= 0 && nums1[i] > nums2[j]) {
-      nums1[k] = nums1[i];
-      i -= 1;
+  while (secondArrPointer >= 0) {
+    if (nums1[firstArrPointer] > nums2[secondArrPointer]) {
+      nums1[mergedPointer] = nums1[firstArrPointer];
+      firstArrPointer--;
+      mergedPointer--;
     } else {
-      nums1[k] = nums2[j];
-      j -= 1;
+      nums1[mergedPointer] = nums2[secondArrPointer];
+      secondArrPointer--;
+      mergedPointer--;
     }
-    k -= 1;
   }
-
   return nums1;
 }
 
