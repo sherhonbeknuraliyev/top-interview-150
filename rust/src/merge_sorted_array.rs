@@ -22,8 +22,17 @@ pub fn merge_sorted_array(nums1: &mut Vec<i32>, mut m: i32, nums2: &mut Vec<i32>
         last -= 1
     }
 
+    while n > 0 {
+        nums1[last] = nums2[(n-1) as usize];
+        n -= 1;
 
-    println!("{:?}", nums1);
+        println!("{last}");
+
+         last = last.wrapping_sub(1) ;
+    }
+
+    println!("{n}, {last}, {:?}",  nums1)
+
 
         
 } 
@@ -44,5 +53,17 @@ mod tests {
 
 
         assert_eq!(nums1, vec![1,2,2,3,5,6])
+    }   
+
+    #[test]
+    fn test_case_2() {
+
+        let mut nums1:Vec<i32> = vec![0];
+        let mut nums2:Vec<i32> = vec![1];
+
+        merge_sorted_array(&mut nums1, 0, &mut nums2, 1);
+
+
+        assert_eq!(nums1, vec![1])
     }    
 }

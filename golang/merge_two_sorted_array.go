@@ -21,6 +21,15 @@ func Merge(nums1 []int, m int, nums2 []int, n int)  {
 	}
 
 
+	for n > 0 {
+
+		nums1[last]=nums2[n-1]
+
+		n -= 1
+
+		last -= 1
+	}
+
 
 
 }	
