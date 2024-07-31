@@ -1,5 +1,5 @@
-function removeElement(nums, val) {
-  let newIndex = 0;
+function removeElement(nums: number[], val: number) {
+  let newIndex: number = 0;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== val) {
@@ -11,4 +11,4 @@ function removeElement(nums, val) {
   return newIndex;
 }
 
-module.exports = removeElement;
+export default removeElement;
