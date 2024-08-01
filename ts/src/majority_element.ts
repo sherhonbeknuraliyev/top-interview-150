@@ -1,6 +1,6 @@
 function majorityElement(nums: number[]) {
   let count: number = 0;
-  let res: number = nums[0];
+  let res = nums[0];
   for (let num of nums) {
     if (count == 0) {
       res = num;
