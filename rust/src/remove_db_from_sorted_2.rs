@@ -65,7 +65,7 @@ mod  tests {
         let _ =  remove_duplicates(&mut nums);
 
 
-        assert_eq!(nums, vec![0,0,1,1,2,3,3] )
+        assert_eq!(nums, vec![0,0,1,1,2,3,3,3,3] )
 
     }
 }
