@@ -10,6 +10,4 @@ function maxProfit2(prices) {
   return max_profit;
 }
 
-console.log(maxProfit2([7, 1, 5, 3, 6, 4]));
-
 module.exports = maxProfit2;
